@@ -1,0 +1,683 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* ===================================== effect ============================== */
+.main--reviews--content--main.active {
+  opacity: 1;
+  visibility: visible;
+}
+.main--reviews--content--main.goLeftOut {
+  animation: go-left-out 1s forwards;
+}
+@-webkit-keyframes go-left-out {
+  0% {
+    transform: translateX(0%);
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-150%);
+    visibility: hiden;
+    opacity: 0;
+  }
+}
+.main--reviews--content--main.goRightIn {
+  animation: go-right-in 1s forwards;
+}
+@-webkit-keyframes go-right-in {
+  0% {
+    transform: translateX(150%);
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+/* ==================== end button next================== */
+.main--reviews--content--main.goLeftIn {
+  animation: 1s go-left-in forwards;
+}
+@-webkit-keyframes go-left-in {
+  0% {
+    transform: translateX(-150%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.main--reviews--content--main.goRightOut {
+  animation: go-right-out 1s forwards;
+}
+@-webkit-keyframes go-right-out {
+  0% {
+    transform: translateX(0%);
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(150%);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+/* ============================= effect carouel =========================== */
+.main--carousel.transLateRight{
+  animation: trans-late-right 1s forwards;
+}
+@-webkit-keyframes trans-late-right{
+  0%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(340px);
+  }
+}
+/* ===========================end button back ==================== */
+/* =================================== general ========================= */
+button {
+  border: none;
+  text-transform: capitalize;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+li {
+  list-style: none;
+}
+body {
+  max-width: 1440px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  margin: auto;
+  background-color: #f2f2f2;
+}
+.button--next,
+.button--back {
+  background-position-x: 50%;
+  background-position-y: 27%;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  transition: 1s;
+}
+.button--next {
+  background-image: url(./symbol-front.png);
+}
+.button--back {
+  background-image: url(./back-button.png);
+}
+.button--next:hover,
+.button--back:hover {
+  transform: scale(1.2);
+}
+/* ================================= header top ============================= */
+.header--top {
+  background-image: url(./Photo.png);
+  width: 100%;
+  position: relative;
+  height: 780px;
+  z-index: 0;
+  transition: height 1s;
+}
+.header--top--fill {
+  background-image: linear-gradient(45deg, #ff512f 10%, #dd2476 90%);
+  opacity: 95%;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  transition: opacity 2s;
+}
+/* ======================= header top nav ========================== */
+.header--top--nav {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 25px 0px 36px;
+  width: 100%;
+}
+.header--top--nav--logo a {
+  font-weight: 800;
+  font-size: 28px;
+  color: #ffffff;
+  transition: font-size 1s;
+}
+.header--top--nav--bar {
+  flex-grow: 5;
+}
+.header--top--nav--bar ul li {
+  display: inline-block;
+  margin-left: 32px;
+  padding-top: 17px;
+  border-bottom: 5px solid rgba(245, 245, 220, 0);
+  transition: 1.5s;
+  text-transform: capitalize;
+}
+.header--top--nav--bar ul li:hover {
+  border-bottom: 5px solid rgb(255, 255, 255);
+}
+
+.header--top--nav--bar ul li a {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.53151px;
+}
+
+.header--top--nav--bar ul li a:hover {
+  color: #000000;
+}
+.header--top--nav--button {
+  font-weight: 500;
+  font-size: 18px;
+}
+.header--top--nav--button button{
+  border-radius: 6px;
+}
+.header--top--nav--button a {
+  border-bottom: 5px solid rgba(245, 245, 220, 0);
+  transition: 0.5s;
+}
+.header--top--nav--button a:hover {
+  color: #000000;
+  border-bottom: 5px solid rgb(255, 255, 255);
+}
+.header--top--nav--button button {
+  padding: 15px 33px;
+  margin-left: 30px;
+  background-color: #fffe00;
+  transition: 1s;
+}
+.header--top--content--button__start:hover,
+.header--top--nav--button button:hover {
+  color: #fff;
+  background-color: #000000;
+}
+.header--top--nav--mobile {
+  color: #f4ff00;
+  background: none;
+  font-size: 36px;
+  padding: 5px 20px;
+  display: none;
+}
+/* ======================= header top content ========================= */
+.header--top--content {
+  position: absolute;
+  z-index: 3;
+  max-width: 976px;
+  color: #ffffff;
+  top: 50%;
+  left: 10%;
+  transition: top 1s;
+}
+.header--top--content h1 {
+  font-weight: 800;
+  font-size: 60px;
+  text-shadow: 0px 0px 10px rgba(94, 94, 94, 0.148862);
+}
+.header--top--content p {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 40px;
+  opacity: 0.82;
+  margin-top: 10px;
+}
+.header--top--content--button {
+  margin-top: 32px;
+  margin-left: 5px;
+}
+.header--top--content--button button {
+  padding: 15px 48px;
+  margin-right: 48px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.header--top--content--button__start {
+  background-color: #fffe00;
+  border-radius: 6px;
+  transition: 1s;
+}
+.header--top--content--button__find {
+  background-color: #ffffff;
+  border-radius: 6px;
+  transition: 1s;
+}
+.header--top--content--button__find:hover {
+  color: #fff;
+  background-color: #000000;
+}
+
+/*=====================header icon =============================*/
+.header--icon {
+  position: absolute;
+  z-index: 3;
+  top: 160px;
+  right: 0;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.header--icon img {
+  max-width: 100%;
+  transition: 1s;
+}
+.header--icon img:hover {
+  transform: scale(1.1);
+}
+/*====================== header bottom ==========================*/
+.header--bottom {
+  padding: 90px 222px;
+  width: 100%;
+  background-color: #ffffff;
+  transition: padding 1s;
+}
+.header--bottom h1 {
+  font-weight: 600;
+  font-size: 36px;
+  text-shadow: 0px 0px 10px rgba(94, 94, 94, 0.148862);
+}
+
+.header--bottom p {
+  font-weight: 500;
+  font-size: 18px;
+  opacity: 0.82;
+  color: #969696;
+  line-height: 33px;
+  letter-spacing: 0.53151px;
+}
+/*===================== main--topics ================================*/
+/* ======================== main mentors ================================== */
+.main--mentors,
+.main--topics {
+  margin: 57px 27px 50px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.main--mentors > h1,
+.main--topics > h1 {
+  font-weight: 600;
+  font-size: 36px;
+  text-shadow: 0px 0px 10px rgba(94, 94, 94, 0.148862);
+  line-height: 82px;
+  border-bottom: 5px solid #f2ff0000;
+  transition: 1s;
+  cursor: pointer;
+  position: relative;
+}
+.main--mentors > h1:hover,
+.main--topics > h1:hover {
+  border-bottom: 5px solid #000000;
+}
+
+.main--mentors > p,
+.main--topics > p {
+  font-weight: 500;
+  font-size: 18px;
+  color: #969696;
+  opacity: 0.82;
+  line-height: 32px;
+}
+.main--carousel {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 42px;
+  width: 2000px;
+  transition: 1s;
+}
+.main--carousel--button__next {
+  position: absolute;
+  bottom: 25%;
+  right: 0;
+}
+.main--carousel--item {
+  margin-right: 10px;
+  position: relative;
+  text-align: center;
+}
+.main--carousel--item img {
+  max-width: 100%;
+}
+.main--carousel--item > p {
+  color: #fff;
+  font-weight: 600;
+  font-size: 28px;
+  text-shadow: 0px 0px 10px rgba(94, 94, 94, 0.148862);
+  position: absolute;
+  bottom: 50px;
+  left: 40px;
+  transition: font-size 1s;
+}
+
+/* ================================== main reviews =============================== */
+
+.main--reviews {
+  margin-top: 105px;
+  background-image: url(./Rectangle14.png);
+  width: 100%;
+  height: 450px;
+  position: relative;
+  z-index: 0;
+}
+.main--reviews--blur {
+  background-image: linear-gradient(#131323, #570101);
+  width: 100%;
+  height: 100%;
+  opacity: 54%;
+  position: absolute;
+  z-index: 1;
+}
+/* ====================================== main reviews content ============================== */
+.main--reviews--content {
+  color: #fff;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 61px 30px;
+}
+.main--reviews--content--main {
+  text-align: center;
+  max-width: 952px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 36%;
+  right: 15%;
+  transition: right 1s;
+}
+.main--reviews--content--main h1 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 82px;
+  text-shadow: 0px 0px 10px rgba(94, 94, 94, 0.148862);
+}
+.main--reviews--content--main p {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 47px;
+  letter-spacing: 0.234586px;
+  text-shadow: 0px 0px 10px rgba(94, 94, 94, 0.148862);
+}
+.main--reviews--content--main__icon {
+  margin-top: 53px;
+  color: #f4ff00;
+}
+/* ====================================== main sales ============================== */
+.main--sales {
+  background-image: linear-gradient(#fe5030, #d72d77);
+  display: flex;
+  justify-content: space-between;
+  padding: 77px 0px 80px 108px;
+}
+.main--sales--content p {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 52px;
+  color: #fff;
+  max-width: 790px;
+  transition: 1s;
+}
+.main--sales--content p a:hover {
+  color: #f4ff00;
+}
+.main--sales--button {
+  width: 250px;
+  height: 80px;
+  padding: 22px 20px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 33px;
+  color: #050505;
+  background-color: #fffe00;
+  text-align: center;
+  border-radius: 6px;
+  margin-right: 90px;
+  transition: 1s;
+}
+.main--sales--button:hover {
+  color: #fff;
+  background-color: #000000;
+}
+/* ====================================== footer ============================== */
+.footer--nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 79px 0px 79px 36px;
+}
+.footer--nav--logo a {
+  font-weight: 800;
+  font-size: 28px;
+  color: #000000;
+}
+.footer--nav--bar ul li {
+  display: inline-block;
+  margin-left: 32px;
+  padding-top: 17px;
+  border-bottom: 5px solid rgba(245, 245, 220, 0);
+  text-transform: capitalize;
+}
+.footer--nav--bar ul li a {
+  color: #000000;
+}
+/* ============================= Responsive ================================ */
+@media (max-width: 1380px) {
+  .header--top--fill {
+    opacity: 60%;
+  }
+  .header--icon {
+    opacity: 0;
+  }
+  .main--carousel--item > p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1324px) {
+  .header--top {
+    height: 500px;
+  }
+  .header--top--content {
+    top: 30%;
+    left: 10%;
+  }
+  .header--bottom {
+    padding: 90px 50px;
+  }
+  .main--reviews--content--main {
+    right: 4%;
+  }
+  .main--sales--content p {
+    font-size: 30px;
+  }
+  .main--sales--button {
+    font-size: 20px;
+    padding: 5px 6px;
+  }
+}
+@media (max-width: 1040px) {
+  .header--top--fill {
+    opacity: 20%;
+  }
+  .header--top--nav--bar {
+    display: none;
+  }
+  .header--top--nav--button {
+    display: none;
+  }
+  .header--top--nav--logo a {
+    font-size: 36px;
+  }
+  .header--top--nav--mobile {
+    display: block;
+    transition: 1s;
+  }
+  .header--top--nav--mobile:hover {
+    border-radius: 6px;
+    background-color: #000000;
+    color: #fff;
+  }
+  .header--top--content {
+    top: 30%;
+    left: 5%;
+    max-width: 700px;
+  }
+  .header--bottom h1 {
+    font-size: 28px;
+  }
+  .header--bottom {
+    padding: 40px 40px;
+  }
+  .main--mentors,
+  .main--topics {
+    margin-top: 90px;
+    margin-bottom: 0;
+  }
+  .main--mentors > p,
+  .main--topics > p {
+    display: none;
+  }
+  .main--carousel {
+    margin-top: 0;
+  }
+  .main--sales {
+    padding: 20px 30px 20px 30px;
+  }
+  .main--sales--button {
+    height: auto;
+    margin-right: 0;
+  }
+}
+@media (max-width: 790px) {
+  .header--top--content {
+    top: 30%;
+    left: 5%;
+    max-width: 500px;
+    text-align: center;
+  }
+  .header--top--content h1 {
+    font-size: 40px;
+  }
+  .header--top--content p {
+    font-size: 16px;
+    line-height: 35px;
+  }
+  .header--top--content--button button {
+    margin-right: 10px;
+  }
+  .header--top--content--button {
+    display: flex;
+    flex-direction: column;
+  }
+  .header--top--content--button__find {
+    margin-top: 10px;
+    padding-right: 30px !important;
+  }
+  .main--reviews--content--main {
+    right: 0;
+    padding: 0 10px;
+  }
+  .main--reviews--content--main h1 {
+    font-size: 24px;
+    line-height: 82px;
+  }
+  .main--reviews--content--main p {
+    font-size: 18px;
+    line-height: 41px;
+  }
+  .main--reviews--content--main__icon {
+    margin-top: 53px;
+    color: #f4ff00;
+  }
+  .button--back {
+    opacity: 0.2;
+  }
+  .button--back:hover {
+    opacity: 1;
+  }
+  .button--next {
+    opacity: 0.2;
+  }
+  .button--next:hover {
+    opacity: 1;
+  }
+  .main--sales--button {
+    margin-left: 20px;
+  }
+  .footer--nav {
+    display: block;
+    padding: 0;
+  }
+  .footer--nav--logo {
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+@media (max-width: 540px) {
+  .header--top--content {
+    top: 20%;
+    left: 5%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .header--top--content h1 {
+    font-size: 26px;
+  }
+  .header--top--content p {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .header--bottom h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .header--bottom p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .main--mentors > h1,
+  .main--topics > h1 {
+    font-size: 26px;
+  }
+  .main--mentors,
+  .main--topics {
+    margin-top: 50px;
+  }
+  .main--reviews--content--main h1 {
+    font-size: 20px;
+    line-height: 82px;
+  }
+  .main--reviews--content--main p {
+    font-size: 13px;
+    line-height: 38px;
+    margin-bottom: 0;
+  }
+  .main--reviews--content--main__icon {
+    margin-top: 20px;
+  }
+  .main--sales--button{
+      display: none;
+  }
+  .footer--nav--logo{
+      display: none;
+  }
+  .main--carousel{
+    transform: translateX(170px);
+  }
+}
