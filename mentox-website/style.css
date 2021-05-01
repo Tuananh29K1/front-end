@@ -68,18 +68,8 @@
     opacity: 0;
   }
 }
-/* ============================= effect carouel =========================== */
-.main--carousel.transLateRight{
-  animation: trans-late-right 1s forwards;
-}
-@-webkit-keyframes trans-late-right{
-  0%{
-    transform: translateX(0px);
-  }
-  100%{
-    transform: translateX(340px);
-  }
-}
+/* ============================= effect carouel review =========================== */
+
 /* ===========================end button back ==================== */
 /* =================================== general ========================= */
 button {
@@ -99,6 +89,7 @@ body {
   margin: auto;
   background-color: #f2f2f2;
 }
+button.slick-next.slick-arrow,
 .button--next,
 .button--back {
   background-position-x: 50%;
@@ -108,15 +99,28 @@ body {
   border-radius: 50%;
   transition: 1s;
 }
+button.slick-next.slick-arrow,
 .button--next {
   background-image: url(./symbol-front.png);
 }
 .button--back {
   background-image: url(./back-button.png);
 }
+button.slick-next.slick-arrow:hover,
 .button--next:hover,
 .button--back:hover {
   transform: scale(1.2);
+}
+.btn-primary {
+  background-color: #f4ff00;
+  color: #131323;
+  border: none;
+  font-weight: 500;
+  transition: 1s;
+}
+.btn-primary:hover {
+  background-color: #4b4b4b;
+  color: #f4ff00;
 }
 /* ================================= header top ============================= */
 .header--top {
@@ -174,13 +178,13 @@ body {
 }
 
 .header--top--nav--bar ul li a:hover {
-  color: #000000;
+  color: #ffffff;
 }
 .header--top--nav--button {
   font-weight: 500;
   font-size: 18px;
 }
-.header--top--nav--button button{
+.header--top--nav--button button {
   border-radius: 6px;
 }
 .header--top--nav--button a {
@@ -188,7 +192,7 @@ body {
   transition: 0.5s;
 }
 .header--top--nav--button a:hover {
-  color: #000000;
+  color: #ffffff;
   border-bottom: 5px solid rgb(255, 255, 255);
 }
 .header--top--nav--button button {
@@ -199,8 +203,8 @@ body {
 }
 .header--top--content--button__start:hover,
 .header--top--nav--button button:hover {
-  color: #fff;
-  background-color: #000000;
+  color: rgb(255, 124, 124);
+  background-color: #4b4b4b;
 }
 .header--top--nav--mobile {
   color: #f4ff00;
@@ -208,6 +212,28 @@ body {
   font-size: 36px;
   padding: 5px 20px;
   display: none;
+}
+.header--top--nav--mobile--menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #27212170;
+  display: none;
+}
+.header--top--nav--mobile--menu ul {
+  background-color: #f4ff00;
+  width: 35%;
+  height: 100%;
+}
+.header--top--nav--mobile--menu li {
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+.header--top--nav--mobile--menu li a {
+  color: #4b4b4b;
 }
 /* ======================= header top content ========================= */
 .header--top--content {
@@ -252,10 +278,9 @@ body {
   transition: 1s;
 }
 .header--top--content--button__find:hover {
-  color: #fff;
-  background-color: #000000;
+  color: rgb(255, 124, 124);
+  background-color: #4b4b4b;
 }
-
 /*=====================header icon =============================*/
 .header--icon {
   position: absolute;
@@ -297,7 +322,8 @@ body {
 /* ======================== main mentors ================================== */
 .main--mentors,
 .main--topics {
-  margin: 57px 27px 50px 60px;
+  margin-top: 50px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -331,21 +357,21 @@ body {
   line-height: 32px;
 }
 .main--carousel {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 42px;
-  width: 2000px;
+  position: relative;
+  width: 100%;
   transition: 1s;
 }
-.main--carousel--button__next {
+button.slick-next.slick-arrow {
   position: absolute;
-  bottom: 25%;
-  right: 0;
+  bottom: 33%;
+  right: 1%;
 }
 .main--carousel--item {
-  margin-right: 10px;
   position: relative;
   text-align: center;
+}
+.slick-slide img {
+  display: inline;
 }
 .main--carousel--item img {
   max-width: 100%;
@@ -356,8 +382,8 @@ body {
   font-size: 28px;
   text-shadow: 0px 0px 10px rgba(94, 94, 94, 0.148862);
   position: absolute;
-  bottom: 50px;
-  left: 40px;
+  bottom: 17px;
+  left: 67px;
   transition: font-size 1s;
 }
 
@@ -424,6 +450,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 77px 0px 80px 108px;
+  width: 100%;
 }
 .main--sales--content p {
   font-weight: 600;
@@ -451,8 +478,8 @@ body {
   transition: 1s;
 }
 .main--sales--button:hover {
-  color: #fff;
-  background-color: #000000;
+  color: rgb(255, 124, 124);
+  background-color: #4b4b4b;
 }
 /* ====================================== footer ============================== */
 .footer--nav {
@@ -475,6 +502,47 @@ body {
 }
 .footer--nav--bar ul li a {
   color: #000000;
+}
+/* ==================================  form  ================================== */
+.background--sign__up,
+.background--login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.background--sign__up--blur,
+.background--login--blur {
+  background-color: #4b4b4ba4;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.board--sign__up,
+.board--login {
+  width: 400px;
+  background-color: #fff;
+  padding: 30px 20px;
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  left: 35%;
+}
+.board--sign__up h1,
+.board--login h1 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 28px;
+}
+.forget--password {
+  color: #4b4b4b;
+}
+.board--sign__up a {
+  color: #dd2476;
 }
 /* ============================= Responsive ================================ */
 @media (max-width: 1380px) {
@@ -627,6 +695,21 @@ body {
     text-align: center;
     padding-top: 20px;
   }
+  .board--sign__up,
+  .board--login {
+    left: 20%;
+  }
+}
+@media (max-width: 647px) {
+  .main--carousel--item p {
+    left: 198px;
+  }
+}
+@media (max-width: 620px) {
+  button.slick-next.slick-arrow {
+    bottom: 34%;
+    right: 21%;
+  }
 }
 @media (max-width: 540px) {
   .header--top--content {
@@ -671,13 +754,19 @@ body {
   .main--reviews--content--main__icon {
     margin-top: 20px;
   }
-  .main--sales--button{
-      display: none;
+  .main--sales--button {
+    display: none;
   }
-  .footer--nav--logo{
-      display: none;
+  .footer--nav--logo {
+    display: none;
   }
-  .main--carousel{
-    transform: translateX(170px);
+  .board--sign__up,
+  .board--login {
+    width: 300px;
+  }
+  .board--sign__up,
+  .board--login {
+    top:10%;
+    left: 10%;
   }
 }

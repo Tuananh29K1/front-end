@@ -8,16 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
+    <!--Font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="./style.css">
+    <!----Jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!--Carousel - slick-->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--Fancybox-->
+    <script src="../mentox-website/fancybox/jquery.fancybox.pack.js"></script>
+    <!--Css-->
+    <link rel="stylesheet" href="../mentox-website/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./style.css">
 
     <title>Mentorbox</title>
 </head>
@@ -41,8 +49,8 @@
                     </ul>
                 </div>
                 <div class="header--top--nav--button">
-                    <a href="#" target="_blank">Log In</a>
-                    <button type="button">Sign Up</button>
+                    <a href="#">Log In</a>
+                    <button type="button" class="button--sign__up">Sign Up</button>
                 </div>
                 <button class="header--top--nav--mobile"><i class="fas fa-bars"></i></button>
             </div>
@@ -69,125 +77,146 @@
         <div class="main--topics">
             <h1>Explore Topics</h1>
             <p>Take a look at some of the most popular areas our students are learning</p>
-            <div class="main--carousel">
-                <div class="main--carousel--item">
-                    <img src="./Rectangle 6.png" alt="#" />
-                    <p>Cooking</p>
-                </div>
-                <div class="main--carousel--item">
-                    <img src="./Rectangle7.png" alt="#" />
-                    <p>Programming</p>
-                </div>
-                <div class="main--carousel--item">
-                    <img src="./Rectangle8.png" alt="#" />
-                    <p>Fashion</p>
-                </div>
-                <div class="main--carousel--item">
-                    <img src="./Rectangle9.png" alt="#" />
-                    <p>Health & Fitness</p>
-                </div>
-                <div class="main--carousel--item">
-                    <img src="./Rectangle 6.png" alt="#" />
-                    <p>music</p>
-                </div>
-                <div class="main--carousel--item">
-                    <img src="./Rectangle 6.png" alt="#" />
-                    <p>music</p>
-                </div>
+            <div class="main--carousel row">
+                <a href="./Rectangle 6.png" rel="topics" title="Cooking">
+                    <div class="col-sm-12 main--carousel--item">
+                        <img src="./Rectangle 6.png" alt="#" />
+                        <p>Cooking</p>
+                    </div>
+                </a>
+                <a href="./Rectangle7.png" rel="topics" title="Programming">
+                    <div class="col-sm-12 main--carousel--item">
+                        <img src="./Rectangle7.png" alt="#" />
+                        <p>Programming</p>
+                    </div>
+                </a>
+                <a href="./Rectangle8.png" rel="topics" title="Fashion">
+                    <div class="col-sm-12 main--carousel--item">
+                        <img src="./Rectangle8.png" alt="#" />
+                        <p>Fashion</p>
+                    </div>
+                </a>
+                <a href="./Rectangle9.png" rel="topics" title="Health & Fitness">
+                    <div class="col-sm-12 main--carousel--item">
+                        <img src="./Rectangle9.png" alt="#" />
+                        <p>Health & Fitness</p>
+                    </div>
+                </a>
+                <a href="../mentox-website/Rectangle 6.png" rel="topics" title="Cooking">
+                    <div class="col-sm-12 main--carousel--item">
+                        <img src="./Rectangle 6.png" alt="#" />
+                        <p>Cooking</p>
+                    </div>
+                </a>
+                <a href="../mentox-website/Rectangle 6.png" rel="topics" title="Cooking">
+                    <div class="col-sm-12 main--carousel--item">
+                        <img src="./Rectangle 6.png" alt="#" />
+                        <p>Cooking</p>
+                    </div>
+                </a>
             </div>
-            <button class="main--carousel--button__next  button--next" type="button"></button>
         </div>
         <!--========================End Main Topics =============================-->
 
         <div class="main--mentors">
             <h1>Explore Mentors</h1>
             <p>Take a look at some of the most popular mentors currently offering their services</p>
-            <div class="main--carousel">
-                <div class="main--carousel--item">
-                    <img src="./Rectangle 6.png" alt="#" />
-                    <p>Cooking</p>
-                </div>
-                <div class="main--carousel--item">
-                    <img src="./Rectangle7.png" alt="#" />
-                    <p>Programming</p>
-                </div>
-                <div class="main--carousel--item">
-                    <img src="./Rectangle8.png" alt="#" />
-                    <p>Fashion</p>
-                </div>
-                <div class="main--carousel--item">
-                    <img src="./Rectangle9.png" alt="#" />
-                    <p>Health & Fitness</p>
-                </div>
-                <div class="main--carousel--item">
-                    <img src="./Rectangle 6.png" alt="#" />
-                    <p>music</p>
-                </div>
-                <div class="main--carousel--item">
-                    <img src="./Rectangle 6.png" alt="#" />
-                    <p>music</p>
-                </div>
+            <div class="main--carousel row">
+                <a href="./Rectangle10.png" rel="mentors" title="Todd Hicks">
+                    <div class="col-sm-12 main--carousel--item">
+                        <img src="./Rectangle10.png" alt="#" />
+                        <p>Todd Hicks</p>
+                    </div>
+                </a>
+                <a href="./Rectangle11.png" rel="mentors" title="Ronald Cole">
+                    <div class="col-sm-12 main--carousel--item">
+                        <img src="./Rectangle11.png" alt="#" />
+                        <p>Ronald Cole</p>
+                    </div>
+                </a>
+                <a href="./Rectangle12.png" rel="mentors" title="Edith Payne">
+                    <div class="col-sm-12 main--carousel--item">
+                        <img src="./Rectangle12.png" alt="#" />
+                        <p>Edith Payne</p>
+                    </div>
+                </a>
+                <a href="./Rectangle13.png" rel="mentors" title="Edwin Dennis">
+                    <div class="col-sm-12 main--carousel--item">
+                        <img src="./Rectangle13.png" alt="#" />
+                        <p>Edwin Dennis</p>
+                    </div>
+                </a>
+                <a href="./Rectangle10.png" rel="mentors" title="Todd Hicks">
+                    <div class="col-sm-12 main--carousel--item">
+                        <img src="./Rectangle10.png" alt="#" />
+                        <p>Todd Hicks</p>
+                    </div>
+                </a>
+                <a href="./Rectangle11.png" rel="mentors" title="Ronald Cole">
+                    <div class="col-sm-12 main--carousel--item">
+                        <img src="./Rectangle11.png" alt="#" />
+                        <p>Ronald Cole</p>
+                    </div>
+                </a>
             </div>
-            <button class="main--carousel--button__next  button--next" type="button"></button>
-        </div>
-        <!--====================== End Main  mentors ========================================-->
-        <div class="main--reviews">
-            <div class="main--reviews--blur"></div>
-            <div class="main--reviews--content">
-                <button class="main--reviews--content--button--back button--back" type="button"></button>
-                <div class="main--reviews--content--main--list">
-                    <div class="main--reviews--content--main active">
-                        <h1>Robert Thompson, Marketer</h1>
-                        <p>“I’m absolutely loving Mentor Box. It’s allowed me to connect with a calibre of expert
-                            I’d
-                            rarely
-                            have the opportunity to meet, and all from my own home.”</p>
-                        <div class="main--reviews--content--main__icon">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+            <!--====================== End Main  mentors ========================================-->
+            <div class="main--reviews">
+                <div class="main--reviews--blur"></div>
+                <div class="main--reviews--content">
+                    <button class="main--reviews--content--button--back button--back" type="button"></button>
+                    <div class="main--reviews--content--main--list">
+                        <div class="main--reviews--content--main active">
+                            <h1>Robert Thompson, Marketer</h1>
+                            <p>“I’m absolutely loving Mentor Box. It’s allowed me to connect with a calibre of expert
+                                I’d
+                                rarely
+                                have the opportunity to meet, and all from my own home.”</p>
+                            <div class="main--reviews--content--main__icon">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="main--reviews--content--main">
+                            <h1>Robert Tuan Anh</h1>
+                            <p>“I’m absolutely loving Mentor Box. It’s allowed me to connect with a calibre of expert
+                                I’d
+                                rarely
+                                have the opportunity to meet, and all from my own home.”</p>
+                            <div class="main--reviews--content--main__icon">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="main--reviews--content--main">
+                            <h1>Nguyen Thompson Marketer</h1>
+                            <p>“I’m absolutely loving Mentor Box. It’s allowed me to connect with a calibre of expert
+                                I’d
+                                rarely
+                                have the opportunity to meet, and all from my own home.”</p>
+                            <div class="main--reviews--content--main__icon">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="main--reviews--content--main">
-                        <h1>Robert Tuan Anh</h1>
-                        <p>“I’m absolutely loving Mentor Box. It’s allowed me to connect with a calibre of expert
-                            I’d
-                            rarely
-                            have the opportunity to meet, and all from my own home.”</p>
-                        <div class="main--reviews--content--main__icon">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="main--reviews--content--main">
-                        <h1>Nguyen Thompson Marketer</h1>
-                        <p>“I’m absolutely loving Mentor Box. It’s allowed me to connect with a calibre of expert
-                            I’d
-                            rarely
-                            have the opportunity to meet, and all from my own home.”</p>
-                        <div class="main--reviews--content--main__icon">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
+                    <button class="main--reviews--content--button--next  button--next" type="button"></button>
                 </div>
-                <button class="main--reviews--content--button--next  button--next" type="button"></button>
             </div>
-        </div>
-        <!--====================== End Main Reviews ========================================-->
-        <div class="main--sales">
-            <div class="main--sales--content">
-                <p><a href="#">Let’s get learning. Sign up and receive 50%
-                        off your first session</a></p>
+            <!--====================== End Main Reviews ========================================-->
+            <div class="main--sales">
+                <div class="main--sales--content">
+                    <p><a href="#">Let’s get learning. Sign up and receive 50%
+                            off your first session</a></p>
+                </div>
+                <button class="main--sales--button" type="button">Lets Get Learning!</button>
             </div>
-            <button class="main--sales--button" type="button">Lets Get Learning!</button>
-        </div>
-        <!--====================== End Main Sales ========================================-->
+            <!--====================== End Main Sales ========================================-->
     </main>
     <footer>
         <div class="footer--nav">
@@ -202,6 +231,74 @@
             </div>
         </div>
     </footer>
+    <!--End footer -->
+    <div class="header--top--nav--mobile--menu">
+        <div class="header--top--nav--mobile--menu--out"></div>
+        <ul>
+            <li><a href="#" target="_blank">how it works</a></li>
+            <li><a href="#" target="_blank">About us</a></li>
+            <li><a href="#" target="_blank">Pricing</a></li>
+            <li><a href="#" target="_blank">Contac Us</a></li>
+        </ul>
+    </div><!-- mobile nav menu-->
+    <div class="background--login">
+        <div class="background--login--blur"></div>
+        <div class="board--login">
+            <h1>Mentorbox</h1>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check  d-flex justify-content-between">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                    <a href="#" target="_blank" class="forget--password">Forget your password ?</a>
+                </div>
+                <div class="d-flex  justify-content-between">
+                    <button type="submit" class="btn btn-primary w-50  me-1">Sign In</button>
+                    <button type="submit" class="btn btn-primary w-50 ms-1 board--login--change--sign__up">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!---End Board Login-->
+    <div class="background--sign__up">
+        <div class="background--sign__up--blur"></div>
+        <div class="board--sign__up">
+            <h1>Mentorbox</h1>
+            <form>
+                <div class="mb-3">
+                    <label for="text" class="form-label">User Name</label>
+                    <input type="text" class="form-control" id="text" aria-describedby="text">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <p>By clicking the Sign Up button,you agree our <a href="#">Terms & Conditions</a>, and <a
+                            href="#">Privacy Policy</a>.</p>
+                </div>
+                <div class="d-flex  justify-content-between">
+                    <button type="submit" class="btn btn-primary w-100 mx-5">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!---End Board Sign Up-->
     <script src="./app.js"></script>
 
 </body>
